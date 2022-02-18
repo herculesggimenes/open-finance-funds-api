@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  database:
+    image: postgres:12-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: test_pass
+      POSTGRES_USER: test_user
+      POSTGRES_DB: test_db
+  redis:
+    image: redis:6-alpine
+    ports:
+      - "6379:6379"
